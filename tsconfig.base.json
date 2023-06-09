@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@electron-nx-monorepo/shared/assets": ["libs/shared/assets/src/index.ts"]
+      "@electron-nx-monorepo/shared/assets": [
+        "libs/shared/assets/src/index.ts"
+      ],
+      "@electron-nx-monorepo/shared/types": ["libs/shared/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,9 +1,8 @@
 import { ipcRenderer, contextBridge } from 'electron';
+import type { API as IAPI } from '@electron-nx-monorepo/shared/types';
 
-const API = {
+const API: IAPI = {
   greet: (message: unknown) => ipcRenderer.invoke('greet', message),
 };
 
 contextBridge.exposeInMainWorld('api', API);
-
-export type API = typeof API;
