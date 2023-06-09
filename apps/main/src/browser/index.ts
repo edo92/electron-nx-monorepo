@@ -18,7 +18,7 @@ export class Browser {
   }
 
   public static get nativeIcon(): Electron.NativeImage {
-    const iconIco = path.resolve('assets/images/logo.png');
+    const iconIco = path.resolve('/assets/logo.png');
     return nativeImage.createFromPath(iconIco);
   }
 

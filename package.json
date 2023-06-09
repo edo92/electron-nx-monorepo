@@ -5,6 +5,7 @@
   "license": "MIT",
   "main": ".webpack/main",
   "scripts": {
+    "build:all":"nx run-many --parallel --target=serve --projects=main,preload,renderer",
     "dev": "cross-env NODE_ENV=development electron-forge start",
     "make": "electron-forge make",
     "package": "electron-forge package",

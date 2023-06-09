@@ -15,8 +15,16 @@
         "baseHref": "/",
         "main": "apps/renderer/src/main.tsx",
         "tsConfig": "apps/renderer/tsconfig.app.json",
-        "assets": ["apps/renderer/src/assets/favicon.ico", "apps/renderer/src/assets"],
-        "styles": ["apps/renderer/src/styles.css"],
+        "assets": [
+          "apps/renderer/src/assets/favicon.ico",
+          "apps/renderer/src/assets",
+          {
+            "input": "libs/shared/assets/src/lib",
+            "glob": "*.png",
+            "output": "assets"
+          }
+        ],
+        "styles": ["apps/renderer/src/styles/styles.css"],
         "scripts": [],
         "isolatedConfig": true,
         "webpackConfig": "apps/renderer/webpack.config.js"
