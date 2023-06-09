@@ -1,8 +1,14 @@
 {
   "name": "@electron-nx-monorepo/source",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
-  "scripts": {},
+  "main": ".webpack/main",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development electron-forge start",
+    "make": "electron-forge make",
+    "package": "electron-forge package",
+    "publish": "electron-forge publish"
+  },
   "private": true,
   "config": {
     "forge": "./tools/forge/forge.config.js"
