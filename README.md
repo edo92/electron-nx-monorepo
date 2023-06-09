@@ -1,5 +1,5 @@
-<h1 style="text-align: center;">Electron Nx-Monorepo</h1>
-<p style="text-align: center;">Electron app boilderplate using React, Electron-Forge</p>
+<h1 align="center">Electron Nx-Monorepo</h1>
+<p align="center">Electron app boilderplate using React, Electron-Forge</p>
 
 <br/>
 
