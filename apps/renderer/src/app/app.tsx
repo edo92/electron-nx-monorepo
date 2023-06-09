@@ -1,14 +1,16 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
+import React from 'react';
 
-import NxWelcome from './nx-welcome';
+export const App = () => {
+  const handleOnClick = () => {
+    window.api.greet('hello');
+  };
 
-export function App() {
   return (
     <div>
-      <NxWelcome title="renderer" />
+      <h1>Hello</h1>
+      <div>
+        <button onClick={handleOnClick}>Click</button>
+      </div>
     </div>
   );
-}
-
-export default App;
+};
