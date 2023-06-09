@@ -7,18 +7,14 @@ declare const APP_WINDOW_WEBPACK_ENTRY: string;
 
 export class Browser {
   private browserWindow!: Electron.BrowserWindow;
-  private readonly tray: TrayMenu;
-
-  constructor() {
-    this.tray = new TrayMenu(Browser.nativeIcon);
-  }
+  private tray: TrayMenu;
 
   public get isVisible(): boolean {
     return this.browserWindow.isVisible();
   }
 
   public static get nativeIcon(): Electron.NativeImage {
-    const iconIco = path.resolve('/assets/logo.png');
+    const iconIco = path.resolve('libs/shared/assets/src/logo.png');
     return nativeImage.createFromPath(iconIco);
   }
 
@@ -48,6 +44,7 @@ export class Browser {
 
   private createTrayMenu(): void {
     if (this.tray) return;
+    this.tray = new TrayMenu(Browser.nativeIcon);
     this.tray.toggle = () => !this.isVisible && this.tray.showWindow();
     this.tray.createTray();
   }

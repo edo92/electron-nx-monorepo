@@ -19,7 +19,7 @@
           "apps/renderer/src/assets/favicon.ico",
           "apps/renderer/src/assets",
           {
-            "input": "libs/shared/assets/src/lib",
+            "input": "libs/shared/assets/src",
             "glob": "*.png",
             "output": "assets"
           }

@@ -23,12 +23,20 @@ module.exports = [
   {
     // SCSS (SASS) Loader
     test: /\.s[ac]ss$/i,
-    use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
+    use: [
+      { loader: 'style-loader' },
+      { loader: 'css-loader' },
+      { loader: 'sass-loader' },
+    ],
   },
   {
     // Less loader
     test: /\.less$/,
-    use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'less-loader' }],
+    use: [
+      { loader: 'style-loader' },
+      { loader: 'css-loader' },
+      { loader: 'less-loader' },
+    ],
   },
   {
     // Assets loader
@@ -37,6 +45,13 @@ module.exports = [
     type: 'asset',
     generator: {
       filename: 'assets/[hash][ext][query]',
+    },
+  },
+  {
+    test: /\.(jpe?g|png|gif|svg)$/i,
+    loader: 'file-loader',
+    options: {
+      name: 'assets/[name].[ext]',
     },
   },
 ];
